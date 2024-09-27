@@ -1,12 +1,12 @@
 .header {
   /* border-bottom: 1px solid black; */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   box-shadow: 2px 2px 4px 1px rgba(13, 11, 11, 0.287);
 }
 
 .app-container {
-  padding: 0 20px;
+  padding: 20px 20px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -17,7 +17,6 @@
 }
 
 .link {
-  padding: 20px 0;
   font-size: 20px;
   color: #201719;
 }

@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.textContent {
+  font-size: 20px;
+}
+
+.backLink {
+  color: lightcoral;
+
+  width: 220px;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  border: 1px solid lightcoral;
+  transition: 250ms;
+  &:hover {
+    color: rgb(119, 84, 50);
+    border-color: rgb(112, 86, 36);
+  }
+}

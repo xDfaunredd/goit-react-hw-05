@@ -20,7 +20,7 @@
   background-color: lightcoral;
   border: none;
   border-radius: 8px;
-
+  transition: 250ms;
   &:focus,
   &:hover {
     background-color: rgb(227, 99, 99);

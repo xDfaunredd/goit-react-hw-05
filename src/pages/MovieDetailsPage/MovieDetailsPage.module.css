@@ -46,7 +46,7 @@
   color: #907e82;
   border: solid 1px #907e82;
   border-radius: 10px;
-
+  transition: 250ms;
   &:hover {
     color: rgb(240, 152, 152);
     border-color: rgb(240, 152, 152);

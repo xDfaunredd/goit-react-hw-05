@@ -9,7 +9,9 @@ const MovieDetailsPage = lazy(() =>
 );
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
 const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
-
+const NotFoundPage = lazy(() =>
+  import("../../pages/NotFoundPage/NotFoundPage")
+);
 import "./App.css";
 
 function App() {
@@ -41,7 +43,7 @@ function App() {
               <Route path="cast" element={<MovieCast />} />
               <Route path="reviews" element={<MovieReviews />} />
             </Route>
-            <Route path="*" element={<h1>Error 404</h1>} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </Suspense>

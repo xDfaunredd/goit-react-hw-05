@@ -37,9 +37,11 @@ const MovieReviews = () => {
                 <h4 className={s.author}>Author: {item.author}</h4>
                 <div className={s.container}>
                   <p>{item.content}</p>
-                  <p>{`${year}-${
-                    Number(month) < 10 ? "0" + month : month
-                  }-${day}  ${hours}:${minutes}`}</p>
+                  <p className={s.date}>{`${year}-${
+                    Number(month) < 10 ? `0${month}` : month
+                  }-${day < 10 ? `0${day}` : day}  ${
+                    hours < 10 ? `0${hours}` : hours
+                  }:${minutes < 10 ? `0${minutes}` : minutes}`}</p>
                 </div>
               </li>
             );

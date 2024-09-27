@@ -1,6 +1,7 @@
 .link {
   font-size: 20px;
   color: #907e82;
+  transition: 250ms;
   &:hover {
     color: lightcoral;
   }
