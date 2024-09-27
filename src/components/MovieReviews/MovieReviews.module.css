@@ -1,0 +1,19 @@
+.helpMessage {
+  font-size: 20px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+.author {
+  max-width: 200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 950px;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}

@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 150px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 150px;
+  background-color: rgba(224, 203, 203, 0.605);
+  padding: 15px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.personName {
+  font-size: 20px;
+}
+.characterName {
+  font-size: 15px;
+}
