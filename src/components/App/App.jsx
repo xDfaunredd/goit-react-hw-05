@@ -34,7 +34,13 @@ function App() {
         </div>
       </header>
 
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense
+        fallback={
+          <div className="app-container">
+            <p>Loading...</p>{" "}
+          </div>
+        }
+      >
         <div className="app-container">
           <Routes>
             <Route path="/" element={<HomePage />} />
