@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.link {
+  font-size: 20px;
+  color: #907e82;
+  &:hover {
+    color: lightcoral;
+  }
+}

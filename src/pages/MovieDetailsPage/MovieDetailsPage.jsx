@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchFilmsByID } from "../../fetchData/fetchData";
 import { FaArrowLeft } from "react-icons/fa";
@@ -9,8 +9,11 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [filmInfo, setFilmInfo] = useState({});
   const location = useLocation();
+  const locateBack = useRef(location.state);
 
-  const locateBack = location.state ?? "/movies";
+  locateBack.current = location.state ?? "/movies";
+
+  console.log(locateBack.current);
 
   useEffect(() => {
     const fetchFilmsData = async () => {
@@ -28,7 +31,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <Link to={locateBack} className={s.backButton}>
+      <Link to={locateBack.current} className={s.backButton}>
         <FaArrowLeft /> BACK TO THE FILMS
       </Link>
 
@@ -54,10 +57,10 @@ const MovieDetailsPage = () => {
           </div>
         </div>
         <div className={s.listLink}>
-          <Link to="cast" className={s.link}>
+          <Link to="cast" state={locateBack.current} className={s.link}>
             Cast
           </Link>
-          <Link to="reviews" className={s.link}>
+          <Link to="reviews" state={locateBack.current} className={s.link}>
             Reviews
           </Link>
         </div>
@@ -66,7 +69,5 @@ const MovieDetailsPage = () => {
     </>
   );
 };
-
-//state={location.state}
 
 export default MovieDetailsPage;

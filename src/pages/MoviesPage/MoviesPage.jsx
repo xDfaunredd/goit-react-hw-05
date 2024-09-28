@@ -1,9 +1,10 @@
 import { Field, Formik, Form } from "formik";
 import { useEffect, useState } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { fetchFilmsByIDForMovies } from "../../fetchData/fetchData";
 import toast from "react-hot-toast";
 import s from "./MoviesPage.module.css";
+import MovieList from "../../components/MovieList/MovieList";
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -17,10 +18,13 @@ const MoviesPage = () => {
   useEffect(() => {
     const fetchMoviesByQuery = async () => {
       const query = searchParams.get("query");
+
       if (!query) {
         return;
       }
+
       setMovies([]);
+
       const data = await fetchFilmsByIDForMovies(query);
       if (data.results.length === 0) {
         return toast.error(`There are no ${query}`);
@@ -49,20 +53,7 @@ const MoviesPage = () => {
         </Form>
       </Formik>
 
-      {movies.length > 0 ? (
-        <ul className={s.list}>
-          {" "}
-          {movies.map((item) => (
-            <li key={item.id}>
-              <Link to={`${item.id}`} state={location} className={s.link}>
-                - {item.title} {item.release_date.slice(0, 4)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        ``
-      )}
+      <MovieList location={location} movies={movies} />
     </>
   );
 };

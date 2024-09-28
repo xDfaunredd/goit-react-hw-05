@@ -1,26 +1,5 @@
-.header {
-  /* border-bottom: 1px solid black; */
-  margin-bottom: 10px;
-
-  box-shadow: 2px 2px 4px 1px rgba(13, 11, 11, 0.287);
-}
-
 .app-container {
   padding: 20px 20px;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.navigation {
-  display: flex;
-  gap: 10px;
-}
-
-.link {
-  font-size: 20px;
-  color: #201719;
-}
-
-.active {
-  color: lightcoral;
 }

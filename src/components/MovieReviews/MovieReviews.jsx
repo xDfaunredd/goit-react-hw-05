@@ -5,7 +5,7 @@ import s from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
   const { movieId } = useParams();
-  const [review, setReview] = useState({});
+  const [review, setReview] = useState([]);
 
   useEffect(() => {
     const fetchReviews = async () => {

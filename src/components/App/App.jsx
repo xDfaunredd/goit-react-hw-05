@@ -13,27 +13,12 @@ const NotFoundPage = lazy(() =>
   import("../../pages/NotFoundPage/NotFoundPage")
 );
 import "./App.css";
+import Navigation from "../Navigation/Navigation";
 
 function App() {
-  const buildLinkClass = ({ isActive }) => {
-    return clsx("link", isActive && "active");
-  };
-
   return (
     <>
-      <header className="header">
-        <div className="app-container">
-          <nav className="navigation">
-            <NavLink to="/" className={buildLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/movies" className={buildLinkClass}>
-              Movies
-            </NavLink>
-          </nav>
-        </div>
-      </header>
-
+      <Navigation />
       <Suspense
         fallback={
           <div className="app-container">
