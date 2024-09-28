@@ -13,13 +13,10 @@ const MovieDetailsPage = () => {
 
   locateBack.current = location.state ?? "/movies";
 
-  console.log(locateBack.current);
-
   useEffect(() => {
     const fetchFilmsData = async () => {
       try {
         const data = await fetchFilmsByID(movieId);
-        console.log(data);
 
         setFilmInfo(data);
       } catch (error) {

@@ -11,7 +11,6 @@ const MovieReviews = () => {
     const fetchReviews = async () => {
       try {
         const data = await fetchFilmsByIDForReviews(movieId);
-        console.log(data.results);
         setReview(data.results);
       } catch (error) {
         console.log(error);
@@ -24,7 +23,6 @@ const MovieReviews = () => {
     <div>
       {review.length > 0 ? (
         <ul>
-          {" "}
           {review.map((item) => {
             const date = new Date(item.created_at);
             const year = date.getFullYear();

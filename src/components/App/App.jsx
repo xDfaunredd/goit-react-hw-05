@@ -1,5 +1,5 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import clsx from "clsx";
+import { Route, Routes } from "react-router-dom";
+
 import { lazy, Suspense } from "react";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
